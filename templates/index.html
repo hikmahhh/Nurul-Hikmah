@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamalan Utama</title>
+    
+</head>
+<body>
+    <nav>
+        <div class="logo"><span>NURUL HIKMAH</span></div>
+        <ul class="nav-links">
+            <li><a href="{% url 'index' %}">Beranda</a></li>
+            <li><a href="{% url 'about' %}">Tentang</a></li>
+            <li><a href="{% url 'blog' %}">Blogs</a></li>
+            <li><a href="{% url 'projects' %}">Project</a></li>
+            <li><a href="{% url 'contact' %}">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        
+        <div class="header-text">
+            <br><br><br><br>
+            <img src="{% static 'syarif.png' %}">
+            <h1>Selamat Datang di Website Saya</h1>
+            <p>Ini adalah deskripsi singkat tentang apa yang bisa Anda temukan di sini.</p>
+            <br>
+        </div>
+    </header>
+
+    <div class="menu">
+        <ul>
+            <li><a href="{% url 'about' %}">Tentang</a></li>
+            <li><a href="{% url 'blog' %}">Blogs</a></li>
+            <li><a href="{% url 'projects' %}">Project</a></li>
+            <li><a href="{% url 'skills' %}">Skills</a></li>
+            <li><a href="{% url 'contact' %}">Kontak</a></li>
+        </ul>
+    </div>
+
+    <div class="bg"></div>
+</body>
+</html>
