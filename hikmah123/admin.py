@@ -1,27 +1,22 @@
+# blog/admin.py
+
 from django.contrib import admin
+from .models import Category, Page, Blog
 
-# Register your models here.
-from .models import Project, Contact, Blog
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('category', 'slug')
+    prepopulated_fields = {'slug': ('category',)}
 
-
-class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('title', 'link')
-
-class SkillAdmin(admin.ModelAdmin):
-    list_display = ('name', 'percentage')
-
-class ContactAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'timestamp')
+class PageAdmin(admin.ModelAdmin):
+    list_display = ('title',)
+    search_fields = ('title',)
 
 class BlogAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'status', 'published_date')
-    list_filter = ('status', 'created_date', 'published_date')
-    search_fields = ('title', 'content')
+    list_display = ('title', 'author', 'category', 'status', 'created_date', 'published_date')
+    list_filter = ('category', 'status', 'created_date', 'published_date')
+    search_fields = ('title', 'author', 'content')
     prepopulated_fields = {'slug': ('title',)}
-    date_hierarchy = 'published_date'
-    ordering = ('status', 'published_date')
 
-
-admin.site.register(Project, ProjectAdmin)
-admin.site.register(Contact, ContactAdmin)
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Page, PageAdmin)
 admin.site.register(Blog, BlogAdmin)

@@ -1,63 +1,31 @@
-from django.shortcuts import render, redirect
-from .models import Project, Skill, Contact, Blog
-from .forms import ContactForm
 
-def index(request):
-    projects = Project.objects.all()
-    skills = Skill.objects.all()
-    blogs = Blog.objects.all()
-    context = {
-        'projects': projects,
-        'skills': skills,
-        'blogs': blogs,
-    }
-    return render(request, 'index.html', context)
+# hikmah123/views.py
 
-def contact(request):
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
-            message = form.cleaned_data['message']
-            Contact.objects.create(name=name, email=email, message=message)
-            # You can add a success message or redirect here
-            return redirect('contact_success')  # Redirect to a success page
-    else:
-        form = ContactForm()
-    return render(request, 'contact.html', {'form': form})
+from django.shortcuts import render, get_object_or_404
+from .models import Category, Page, Blog
 
-def contact_success(request):
-    return render(request, 'contact_success.html')
+def home(request):
+    categories = Category.objects.all()
+    pages = Page.objects.filter(is_published=True)
+    posts = Blog.objects.filter(status=1)
+    return render(request, 'home.html', {'categories': categories, 'pages': pages, 'posts': posts})
 
+def category_list(request):
+    categories = Category.objects.all()
+    return render(request, 'category_list.html', {'categories': categories})
 
-def blog(request):
-    blogs = Blog.objects.filter(status=1).order_by('-published_date')
-    context = {
-        'blogs': blogs,
-    }
-    return render(request, 'blog.html', context)
+def post_list(request):
+    posts = Blog.objects.filter(status=1)
+    return render(request, 'post_list.html', {'posts': posts})
 
-def blog_detail(request, slug):
-    blog = Blog.objects.get(slug=slug)
-    context = {
-        'blog': blog,
-    }
-    return render(request, 'blog_detail.html', context)
+def page_list(request):
+    pages = Page.objects.filter(is_published=True)
+    return render(request, 'page_list.html', {'pages': pages})
 
-def projects(request):
-    projects = Project.objects.all()
-    context = {
-        'projects': projects,
-    }
-    return render(request, 'projects.html', context)
+def post_detail(request, slug):
+    post = get_object_or_404(Blog, slug=slug, status=1)
+    return render(request, 'post_detail.html', {'post': post})
 
-def skills(request):
-    skills = Skill.objects.all()
-    context = {
-        'skills': skills,
-    }
-    return render(request, 'skills.html', context)
-
-def about(request):
-    return render(request, 'about.html')
+def page_detail(request, slug):
+    page = get_object_or_404(Page, slug=slug, is_published=True)
+    return render(request, 'page_detail.html', {'page': page})
