@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Header</title>
+  <title>Nurul's Money Management Hub</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
@@ -54,11 +54,13 @@
       padding: 20px;
       border-radius: 10px; /* Membuat sudut kotak melengkung */
       display: flex; /* Menggunakan flexbox untuk menata gambar dan teks */
+      flex-direction: column; /* Tampilkan isi dalam kolom */
+      align-items: center; /* Pusatkan isi secara horizontal */
     }
 
     .content-box img {
       max-width: 200px; /* Mengatur lebar maksimum gambar */
-      margin-right: 20px; /* Jarak antara gambar dan teks */
+      margin-bottom: 20px; /* Jarak bawah gambar */
     }
 
     h2 {
@@ -72,6 +74,23 @@
       color: white; /* Warna teks konten */
     }
 
+    .form-group {
+      margin-bottom: 20px; /* Jarak antar input form */
+    }
+
+    .form-control {
+      width: 100%; /* Lebar input form */
+    }
+
+    .btn {
+      background-color: #4CAF50; /* Warna hijau */
+      color: white; /* Warna teks putih */
+      border: none; /* Tanpa border */
+      padding: 10px 20px; /* Padding tombol */
+      border-radius: 5px; /* Sudut tombol melengkung */
+      cursor: pointer; /* Ubah kursor menjadi pointer */
+    }
+
     .footer {
       background-color: #D3B774; /* Warna latte */
       padding: 25px;
@@ -83,7 +102,6 @@
 
     .footer h5 {
       margin-bottom: 20px;
-      
     }
 
     .footer img {
@@ -95,16 +113,16 @@
 <body>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">NH Finansial</a> <!-- Ganti dengan nama Anda -->
+      <a class="navbar-brand" href="#">Nurul's Money Management Hub</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup"> <!-- Pindahkan ke sebelah kanan -->
-        <div class="navbar-nav ms-auto"> <!-- Pindahkan ke sebelah kanan -->
-          <a class="nav-link" href="/#/">Home</a> <!-- Tambahkan menu Home -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="/#/">Home</a>
           <a class="nav-link active" aria-current="page" href="/pencatatan/">Pencatatan</a>
           <a class="nav-link" href="/post/">Post</a>
-          <a class="nav-link" href="/contact/">Contact</a>
+          <a class="nav-link" href="/kontak/">Kontak</a>
           <a class="nav-link" href="/login/">Login</a>
         </div>
       </div>
@@ -113,44 +131,36 @@
 
   <div class="container">
     <div class="content-box">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3y2VyWflzWF3RrhkfdG_zeENPBNZS8FO5LWrAPUB7odX2pd-e2NFAOmC5Q5Rjx5CFog2D8Q_2Wy_Z5tZFsTAikCWmoeM-IjvakfXPdTdQOW8aA87MpFa5CxHL-tMnTSiUIxMUdQHV2Fg0XuQaawNk0qGu28eEL60lQCO7QnIX3Z_aRLu0vZ0VoUIN-L4/s735/WhatsApp_icon.png" alt="WhatsApp" style="margin-top: 10px;">
-      <div>
-        <h2>Selamat Datang di Blog Pencatatan Keuangan!</h2>
-        <p>Di sini kami memberikan informasi, tips, dan saran untuk membantu Anda mengelola keuangan sehari-hari dengan lebih baik. Mulai dari mengatur anggaran hingga mencari cara untuk menghemat uang dan merencanakan masa depan finansial Anda, kami memiliki semua yang Anda butuhkan untuk meraih keberhasilan keuangan.</p>
-        <p>Jelajahi artikel-artikel kami, baca tips praktis, dan temukan panduan langkah demi langkah untuk membantu Anda mencapai tujuan keuangan Anda. Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan atau ingin berbagi pengalaman Anda!</p>
+      <h2>Pencatatan Keuangan Sehari-hari</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Tanggal</th>
+            <th>Pendapatan</th>
+            <th>Pengeluaran</th>
+            <!-- Kolom total di akhir -->
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Isi tabel akan digenerate menggunakan JavaScript -->
+        </tbody>
+      </table>
+      <!-- Kotak kecil (dropdown) untuk memilih bulan -->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          Pilih Bulan
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" href="#">Januari</a></li>
+          <li><a class="dropdown-item" href="#">Februari</a></li>
+          <!-- Tambahkan opsi untuk bulan-bulan lainnya -->
+        </ul>
       </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="content-box">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjo9nVeFCi6pEbnaIzQnZvzGgVbNELMgOEfUcfF5EYSI5JrMeZw7MnE-9jHTug8scjE8hM7SqJjIBsEAjBsfZAaxioReQSm22ra8kQzLrrICQTR6svuhO0XrhTKzVpRojYfL64PtVCmCJJyHpfJFjCa1mN_DDclNMS1ViZUDr1MQtp7jE-LDJaYmNP-c4s/s736/download%20(11).jpeg" alt="Gambar 1"> <!-- Ganti dengan sumber dan nama gambar -->
-      <div>
-        <h2>Manfaat Menabung secara Rutin</h2>
-        <p> <p>Menabung rutin adalah kebiasaan keuangan yang sangat berharga. Dengan menabung setiap bulan, Anda membangun tabungan untuk masa depan dan membentuk disiplin keuangan yang kuat. Selain itu, menabung secara teratur memungkinkan Anda memiliki dana darurat yang siap digunakan saat dibutuhkan.</p>
-          <p>Selain itu, menabung rutin juga membantu Anda mencapai tujuan keuangan dengan lebih mudah. Dengan memiliki rencana menabung yang teratur, Anda dapat merencanakan liburan impian atau mempersiapkan dana untuk pendidikan atau pensiun. Dengan kata lain, menabung secara rutin membuka pintu menuju kebebasan finansial dan membantu Anda mewujudkan impian keuangan Anda.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="content-box">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMeJHuVTj2xYESir93dPhC_muRj743OpcB7gww433JMcPxyD1j2euXl2HBpSaniy3zQ6tbUqXLa8sDrlM2jiiCrZGIQV6aJpiaNIcP-4qrylk9qh1pC6EJLpwM-lRj4z1ZFAHBM69nESbE_StDJ_T_Q4dwbtP2j-qd729CJM6Sgkr3u0K9WMJqoz1Gjcg/s736/Jesus%20Cristo%20nos%20ensina%20sobre%20equil%C3%ADbrio%20financeiro.jpeg" alt="Gambar 2"> <!-- Ganti dengan sumber dan nama gambar -->
-      <div>
-        <h2>Tips Mengelola Uang dengan Efektif</h2>
-        <p>Mengelola uang dengan efektif merupakan kunci untuk mencapai kestabilan finansial. Pertama, buatlah anggaran yang realistis untuk mengontrol pengeluaran dan alokasikan dana untuk kebutuhan primer seperti tagihan rutin, tabungan, dan pembayaran utang. Selanjutnya, manfaatkan teknologi keuangan seperti aplikasi pengelolaan uang atau spreadsheet untuk memantau arus kas dan mengevaluasi kebiasaan pengeluaran Anda secara berkala.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="content-box">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMPsCqUd5gDulZ7sV93s4fcMWpsuLdJFCSGznfIbnPP7EL7FS5zdRQoV336xfClyZr-1UECt2B1T8Xb30Dewr64jnjcAn2Cj4Uy8t9taJv5V2rDAd0aN8Q3xZ-v15v1aSpL1hD0S2mQ6zb42NaS4PhDx5qTZ7SXzb7l1J0ku7wJsWPOZl4bmg3Pq3RlQY/s736/Rekonsiliasi%20Bank%20(Bank%20reconciliation)%20-%20PINTERpandai.jpeg"alt="Gambar 2"> <!-- Ganti dengan sumber dan nama gambar -->
-      <div>
-        <h2>Strategi Menghemat Uang dalam Kehidupan Sehari-hari</h2>
-        <p>Evaluasilah kebutuhan dan keinginan Anda secara cermat, lalu prioritaskan pengeluaran Anda berdasarkan hal-hal yang benar-benar penting dan memberikan nilai tambah dalam hidup Anda. Misalnya, Anda dapat mempertimbangkan untuk memotong biaya langganan yang tidak terpakai atau mencari alternatif yang lebih ekonomis untuk kegiatan hobi atau rekreasi.</p>
-        <p>Selain itu, manfaatkanlah diskon, promosi, dan penawaran khusus yang tersedia untuk barang dan layanan yang Anda butuhkan. Berbelanja cerdas dengan membandingkan harga, menggunakan kupon diskon, atau memanfaatkan program loyalitas dapat membantu Anda menghemat uang secara signifikan dalam jangka panjang.</p>
-      </div>
+      <!-- Tombol untuk mendownload hasil rekap catatan keuangan -->
+      <button class="btn btn-success">Download Rekap</button>
+      <!-- Tombol untuk melihat hasil pencatatan keuangan pada bulan sebelumnya -->
+      <button class="btn btn-info">Lihat Catatan Bulan Sebelumnya</button>
     </div>
   </div>
 
@@ -177,8 +187,37 @@
       </div>
     </div>
   </div>
+
+  <script>
+    // Mendapatkan tanggal sekarang
+    let currentDate = new Date();
+    let currentYear = currentDate.getFullYear();
+    let currentMonth = currentDate.getMonth() + 1; // Ditambah 1 karena Januari dimulai dari 0
+    let daysInMonth = new Date(currentYear, currentMonth, 0).getDate(); // Mendapatkan jumlah hari dalam bulan ini
+
+    // Generate baris tabel untuk setiap hari dalam bulan ini
+    let tableBody = document.querySelector('tbody');
+    for (let day = 1; day <= daysInMonth; day++) {
+      let row = document.createElement('tr');
+      let dateCell = document.createElement('td');
+      dateCell.textContent = day + '/' + currentMonth + '/' + currentYear;
+      row.appendChild(dateCell);
+      let incomeCell = document.createElement('td');
+      let incomeInput = document.createElement('input');
+      incomeInput.setAttribute('type', 'text');
+      incomeInput.setAttribute('class', 'form-control');
+      incomeInput.setAttribute('name', 'income_' + day);
+      incomeCell.appendChild(incomeInput);
+      row.appendChild(incomeCell);
+      let expenseCell = document.createElement('td');
+      let expenseInput = document.createElement('input');
+      expenseInput.setAttribute('type', 'text');
+      expenseInput.setAttribute('class', 'form-control');
+      expenseInput.setAttribute('name', 'expense_' + day);
+      expenseCell.appendChild(expenseInput);
+      row.appendChild(expenseCell);
+      tableBody.appendChild(row);
+    }
+  </script>
 </body>
 </html>
-  
-  
-

@@ -14,18 +14,18 @@ def category_list(request):
     categories = Category.objects.all()
     return render(request, 'category_list.html', {'categories': categories})
 
-def post_list(request):
+def post(request):
     posts = Blog.objects.filter(status=1)
-    return render(request, 'post_list.html', {'posts': posts})
+    return render(request, 'post.html', {'posts': posts})
 
-def page_list(request):
+def pencatatan(request):
     pages = Page.objects.filter(is_published=True)
-    return render(request, 'page_list.html', {'pages': pages})
+    return render(request, 'pencatatan.html', {'pencatatan': pencatatan})
 
-def post_detail(request, slug):
-    post = get_object_or_404(Blog, slug=slug, status=1)
-    return render(request, 'post_detail.html', {'post': post})
+def contact(request):
+    posts = Blog.objects.filter(status=1)
+    return render(request, 'contact.html', {'contact': contact})
 
-def page_detail(request, slug):
-    page = get_object_or_404(Page, slug=slug, is_published=True)
-    return render(request, 'page_detail.html', {'page': page})
+def login(request):
+    posts = Blog.objects.filter(status=1)
+    return render(request, 'login.html', {'login': login})
