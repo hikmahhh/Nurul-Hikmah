@@ -11,7 +11,6 @@
 
 ## Page Contact
 ![Gambar](https://github.com/hikmahhh/Nurul-Hikmah/blob/main/ss%20web/Contact.png)
-![Gambar](https://github.com/hikmahhh/Nurul-Hikmah/blob/main/ss%20web/Contact.png)
 
 ## Page Pencatatan
-![Gambar](https://github.com/hikmahhh/Nurul-Hikmah/blob/main/ss%20web/Contact.png)
+![Gambar](https://github.com/hikmahhh/Nurul-Hikmah/blob/main/ss%20web/Pencatatan.png)
