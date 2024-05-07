@@ -104,12 +104,50 @@
           <a class="nav-link" href="/#/">Home</a> <!-- Tambahkan menu Home -->
           <a class="nav-link active" aria-current="page" href="/pencatatan/">Pencatatan</a>
           <a class="nav-link" href="/post/">Post</a>
-          <a class="nav-link" href="/kontak/">Kontak</a>
+          <a class="nav-link" href="/contact/">Contact</a>
           <a class="nav-link" href="/login/">Login</a> <!-- Tambahkan menu Login -->
         </div>
       </div>
     </div>
   </nav>
+  </style>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="content-box">
+          <!-- Profil Anda -->
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDRTa2Nw0UZNnt2nWZFNqSt4d4cU-NetjV8rk6iB71Go3HOUfXVtqyaXPp30ZrFCKpmdKcv-hAQe9OKN8Od7jcGobZJBuZen3tnzJKJChyphenhyphenbtsRDiQC32vmClVuWc45_NRp2rZE5YhNZjvBIDrbaUFInxmDgGh61V6pw6-nHZExc-WwcmlGuRoNyuSmdZE/s1024/IMG_20220428_094144.jpg" alt="Profil Anda" style="max-width: 200px;">
+          <div>
+            <h2>Profil Saya</h2>
+            <p>Mahasiswa energik dan penuh semangat yang sedang menempuh studi Bisnis Digital di Universitas Negeri Makassar. Berusaha mengasah keterampilan di bidang bisnis yang berbasis digital, Website, Bahasa Python dan R.</p>
+            <a href="https://www.instagram.com/nurul_h025?igsh=MTQ2ZmFrZGIzM3l1bQ=="><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmmd_G5XQOnHFD8mp8RaBRR1DknBjlhzj4CGk79xYzGw8B7LE-LbGcSlsL_C-Db25ZrQMWCQ_ZbzOAhqzw7mjaCEg0MLvL9vi7SYbPpoQSsBDRjozO21JW-bmQq8gs_CQ7XBZDMvpfgct1S6ZOgmRLvR0X0aaUH8ar_cmsCLBbEJEvqYglMlGKg2-3dzg/s500/Instagram-removebg-preview.png" alt="Instagram" style="width: 40px; height: 40px;"></a>
+            <a href="https://www.facebook.com/share/4VEXou5agZ7tanpq/?mibextid=qi2Omg"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2AYup9Hhz2Rl40OvlA9TfgTH0ujil-etlvgN_oGPMtLEiq4x-isAsi5vttaxNjFgMSG1NTBB8Dz3HP1lwbI2yyBonJ_1tdzhluczktLUiehlmT0FbCTSTos6W1fgQ9NPVA9G57O5A9miicP1uKQP1fGKz_D-LKPpYTbG-ubjoT7oZMzSlyfFZ_lVsdLw/s360/Ikon_Putih__Ikon_Putih__Sosial__Media_PNG_dan_Vektor_dengan_Background_Transparan_untuk_Unduh_Gratis-removebg-preview.png" alt="Facebook" style="width: 40px; height: 40px;"></a>
+            <a href="https://www.linkedin.com/in/nurul-hikmah-0b37b5297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh768RrUU7gnwWYeVhyphenhyphenVchRhocfRmSZi-VzAoOJPt356VWAH6qcaiV8GrHLTEvakAM-_NJ5qCBN-sS2fRVFhJ11gZyyxJPv48RFk-JtbnvkEaL0YHah0bOajXLxzqUctXxuuoRubPQ0XWZo02od_ZFiAI3Z2_1hcPd9CkzikaBv7WZGEuNkIeMnyKFjMPM/s360/Ikon_Linkedin_White__Ikon_Yang_Ditautkan__Ikon_Putih__Logo_Tertaut_PNG_dan_Vektor_dengan_Background_Transparan_untuk_Unduh_Gratis-removebg-preview.png" alt="LinkedIn" style="width: 45px; height: 45px;"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="content-box">
+          <!-- Form Kontak -->
+          <form action="/submit_contact_form" method="POST">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nama</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Pesan</label>
+              <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kirim</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> 
 
   <div class="footer">
     <div class="container-fluid">
