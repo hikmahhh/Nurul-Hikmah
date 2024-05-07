@@ -138,8 +138,6 @@
             <th>Tanggal</th>
             <th>Pendapatan</th>
             <th>Pengeluaran</th>
-            <!-- Kolom total di akhir -->
-            <th>Total</th>
           </tr>
         </thead>
         <tbody>
@@ -152,8 +150,18 @@
           Pilih Bulan
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <li><a class="dropdown-item" href="#">Januari</a></li>
-          <li><a class="dropdown-item" href="#">Februari</a></li>
+          <li><a class="dropdown-item" href="#">January</a></li>
+          <li><a class="dropdown-item" href="#">February</a></li>
+          <li><a class="dropdown-item" href="#">March</a></li>
+          <li><a class="dropdown-item" href="#">April</a></li>
+          <li><a class="dropdown-item" href="#">May</a></li>
+          <li><a class="dropdown-item" href="#">June</a></li>
+          <li><a class="dropdown-item" href="#">July</a></li>
+          <li><a class="dropdown-item" href="#">August</a></li>
+          <li><a class="dropdown-item" href="#">September</a></li>
+          <li><a class="dropdown-item" href="#">October</a></li>
+          <li><a class="dropdown-item" href="#">November</a></li>
+          <li><a class="dropdown-item" href="#">December</a></li>
           <!-- Tambahkan opsi untuk bulan-bulan lainnya -->
         </ul>
       </div>
@@ -189,6 +197,7 @@
   </div>
 
   <script>
+    // JavaScript untuk mengatur tabel dan perhitungan total
     // Mendapatkan tanggal sekarang
     let currentDate = new Date();
     let currentYear = currentDate.getFullYear();
@@ -205,19 +214,44 @@
       let incomeCell = document.createElement('td');
       let incomeInput = document.createElement('input');
       incomeInput.setAttribute('type', 'text');
-      incomeInput.setAttribute('class', 'form-control');
+      incomeInput.setAttribute('class', 'form-control income');
       incomeInput.setAttribute('name', 'income_' + day);
+      incomeInput.addEventListener('input', calculateTotal); // Tambahkan event listener untuk menghitung total saat input berubah
       incomeCell.appendChild(incomeInput);
       row.appendChild(incomeCell);
       let expenseCell = document.createElement('td');
       let expenseInput = document.createElement('input');
       expenseInput.setAttribute('type', 'text');
-      expenseInput.setAttribute('class', 'form-control');
+      expenseInput.setAttribute('class', 'form-control expense');
       expenseInput.setAttribute('name', 'expense_' + day);
+      expenseInput.addEventListener('input', calculateTotal); // Tambahkan event listener untuk menghitung total saat input berubah
       expenseCell.appendChild(expenseInput);
       row.appendChild(expenseCell);
       tableBody.appendChild(row);
     }
+
+    // Fungsi untuk menghitung total dan menampilkan hasilnya
+    function calculateTotal() {
+      let rows = document.querySelectorAll('tbody tr');
+      let totalIncome = 0;
+      let totalExpense = 0;
+      rows.forEach(row => {
+        let income = parseFloat(row.querySelector('.income').value) || 0;
+        let expense = parseFloat(row.querySelector('.expense').value) || 0;
+        totalIncome += income;
+        totalExpense += expense;
+      });
+      let totalRow = document.querySelector('tbody tr:last-child');
+      let totalIncomeCell = totalRow.querySelector('.totalIncome');
+      totalIncomeCell.textContent = 'Rp ' + totalIncome.toLocaleString(); // Format pendapatan sebagai "Rp"
+      let totalExpenseCell = totalRow.querySelector('.totalExpense');
+      totalExpenseCell.textContent = 'Rp ' + totalExpense.toLocaleString(); // Format pengeluaran sebagai "Rp"
+      let totalCell = totalRow.querySelector('.total');
+      totalCell.textContent = 'Rp ' + (totalIncome - totalExpense).toLocaleString(); // Format total sebagai "Rp" dan menjumlahkan
+    }
+
+    // Panggil fungsi calculateTotal saat dokumen dimuat
+    document.addEventListener('DOMContentLoaded', calculateTotal);
   </script>
 </body>
 </html>
