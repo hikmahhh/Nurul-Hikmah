@@ -18,9 +18,9 @@ def post(request):
     posts = Blog.objects.filter(status=1)
     return render(request, 'post.html', {'posts': posts})
 
-def pencatatan(request):
+def financial(request):
     pages = Page.objects.filter(is_published=True)
-    return render(request, 'pencatatan.html', {'pencatatan': pencatatan})
+    return render(request, 'financial.html', {'financial': financial})
 
 def contact(request):
     posts = Blog.objects.filter(status=1)
