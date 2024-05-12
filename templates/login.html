@@ -3,33 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Header</title>
+  <title>Login</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     .navbar {
-      top: 20px; /* Menentukan jarak dari bagian atas */
-      background-color: #D3B774; /* Warna latte */
+      top: 20px;
+      background-color: #D3B774;
       font-family: Arial, sans-serif;
       font-weight: bold;
       font-size: 25px;
-      padding-left: 30px; /* Tambahkan padding di sebelah kiri */
-      padding-right: 30px; /* Tambahkan padding di sebelah kanan */
-      padding-top: 15px; /* Tambahkan padding di bagian atas */
-      padding-bottom: 15px; /* Tambahkan padding di bagian bawah */
-      border-radius: 100px; /* Membuat sudut kotak melengkung */
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-radius: 100px;
     }
 
     .navbar-brand {
       color: white;
-      font-size: 20px; /* Ubah ukuran huruf menjadi 25px */
-      margin-right: auto; /* Pindahkan ke sebelah kiri */
+      font-size: 20px;
+      margin-right: auto;
     }
 
     .navbar-nav .nav-link {
       color: white !important;
-      font-size: 20px; /* Ubah ukuran huruf menjadi 25px */
-      margin-left: 20px; /* Tambahkan margin ke kiri */
+      font-size: 20px;
+      margin-left: 20px;
     }
 
     .navbar-toggler-icon {
@@ -37,79 +37,158 @@
     }
 
     body {
-      background-image: url('background_image.jpg'); /* Ganti background halaman dengan gambar */
+      background-image: url('background_image.jpg');
       background-size: cover;
       background-repeat: no-repeat;
-      color: #333; /* Warna teks */
-      font-family: Arial, sans-serif; /* Tambahkan font family untuk seluruh body */
-      font-weight: normal; /* Tambahkan ketebalan huruf untuk seluruh body */
+      color: #333;
+      font-family: Arial, sans-serif;
+      font-weight: normal;
     }
 
     .container {
-      margin-top: 50px; /* Jarak antara header dan konten */
+      margin-top: 50px;
     }
 
     .content-box {
-      background-color: #D3B774; /* Warna latte */
+      background-color: #D3B774;
       padding: 20px;
-      border-radius: 10px; /* Membuat sudut kotak melengkung */
-      display: flex; /* Menggunakan flexbox untuk menata gambar dan teks */
+      border-radius: 10px;
+      display: flex;
     }
 
     .content-box img {
-      max-width: 200px; /* Mengatur lebar maksimum gambar */
-      margin-right: 20px; /* Jarak antara gambar dan teks */
+      max-width: 200px;
+      margin-right: 20px;
     }
 
     h2 {
-      font-size: 30px; /* Ukuran judul konten */
+      font-size: 30px;
       font-weight: bold;
-      color: white; /* Warna teks judul */
+      color: white;
     }
 
     p {
-      font-size: 18px; /* Ukuran teks konten */
-      color: white; /* Warna teks konten */
+      font-size: 18px;
+      color: white;
     }
 
     .footer {
-      background-color: #D3B774; /* Warna latte */
+      background-color: #D3B774;
       padding: 25px;
       color: white;
       font-weight: normal;
-      font-family: Arial, sans-serif; /* Tambahkan font family untuk footer */
-      margin-top: 50px; /* Jarak antara footer dengan konten */
+      font-family: Arial, sans-serif;
+      margin-top: 50px;
     }
 
     .footer h5 {
       margin-bottom: 20px;
-      
     }
 
     .footer img {
       margin-top: 10px;
       margin-right: 10px;
     }
+
+    .login-container {
+      max-width: 400px;
+      margin: 0 auto;
+      margin-top: 100px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-title {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #D3B774;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .form-group button:hover {
+      background-color: #b39e68;
+    }
+
+    .form-group .register-link {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .form-group .register-link a {
+      color: #D3B774;
+    }
+
+    .form-group .register-link a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Nurul Hikmah</a> <!-- Ganti dengan nama Anda -->
+      <a class="navbar-brand" href="#">Nurul Hikmah</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup"> <!-- Pindahkan ke sebelah kanan -->
-        <div class="navbar-nav ms-auto"> <!-- Pindahkan ke sebelah kanan -->
-          <a class="nav-link" href="/#/">Home</a> <!-- Tambahkan menu Home -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="/#/">Home</a>
           <a class="nav-link active" aria-current="page" href="/pencatatan/">Pencatatan</a>
           <a class="nav-link" href="/post/">Post</a>
           <a class="nav-link" href="/contact/">Contact</a>
-          <a class="nav-link" href="/login/">Login</a> <!-- Tambahkan menu Login -->
+          <a class="nav-link" href="/login/">Login</a>
         </div>
       </div>
     </div>
   </nav>
+
+  <div class="container">
+    <div class="login-container">
+      <h2 class="login-title">Login</h2>
+      <form>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <div class="form-group">
+          <button type="submit">Login</button>
+        </div>
+        <div class="form-group register-link">
+          Don't have an account? <a href="#">Register here</a>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <div class="footer">
     <div class="container-fluid">
@@ -134,6 +213,8 @@
       </div>
     </div>
   </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
