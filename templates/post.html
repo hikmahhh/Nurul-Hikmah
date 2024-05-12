@@ -72,6 +72,71 @@
       color: white; /* Warna teks konten */
     }
 
+    .post-title {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .post {
+      margin-bottom: 40px;
+    }
+    .read-more {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: #D3B774;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    
+    .post-title {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .post-card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      width: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 15px;
+    }
+    .card-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .card-text {
+      font-size: 16px;
+      color: #666;
+    }
+    .read-more {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: #D3B774;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
     .footer {
       background-color: #D3B774; /* Warna latte */
       padding: 25px;
@@ -111,16 +176,54 @@
     </div>
   </nav>
 
-  <div class="container">
-    <div class="content-box">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjo9nVeFCi6pEbnaIzQnZvzGgVbNELMgOEfUcfF5EYSI5JrMeZw7MnE-9jHTug8scjE8hM7SqJjIBsEAjBsfZAaxioReQSm22ra8kQzLrrICQTR6svuhO0XrhTKzVpRojYfL64PtVCmCJJyHpfJFjCa1mN_DDclNMS1ViZUDr1MQtp7jE-LDJaYmNP-c4s/s736/download%20(11).jpeg alt="Gambar 1">
-      <div>
-        <h2>Manfaat Menabung secara Rutin</h2>
-        <p>Menabung rutin adalah kebiasaan keuangan yang sangat berharga. Dengan menabung setiap bulan, Anda membangun tabungan untuk masa depan dan membentuk disiplin keuangan yang kuat. Selain itu, menabung secara teratur memungkinkan Anda memiliki dana darurat yang siap digunakan saat dibutuhkan.</p>
-        <p>Selain itu, menabung rutin juga membantu Anda mencapai tujuan keuangan dengan lebih mudah. Dengan memiliki rencana menabung yang teratur, Anda dapat merencanakan liburan impian atau mempersiapkan dana untuk pendidikan atau pensiun. Dengan kata lain, menabung secara rutin membuka pintu menuju kebebasan finansial dan membantu Anda mewujudkan impian keuangan Anda.</p>
+   <!-- Post Title -->
+  <h2 class="post-title">Latest Posts</h2>
+
+  <!-- Post Cards -->
+  <div class="post-card">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="post1.jpg" class="card-img-top" alt="Post 1">
+      <div class="card-body">
+        <h5 class="card-title">Post Title 1</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id tempus velit.</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </div>
+
+     <!-- Card 2 -->
+    <div class="card">
+      <img src="post2.jpg" class="card-img-top" alt="Post 2">
+      <div class="card-body">
+        <h5 class="card-title">Post Title 2</h5>
+        <p class="card-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="post3.jpg" class="card-img-top" alt="Post 3">
+      <div class="card-body">
+        <h5 class="card-title">Post Title 3</h5>
+        <p class="card-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <img src="post4.jpg" class="card-img-top" alt="Post 4">
+      <div class="card-body">
+        <h5 class="card-title">Post Title 4</h5>
+        <p class="card-text">Vivamus lobortis, arcu eget euismod fermentum, felis libero malesuada lacus.</p>
+        <a href="#" class="read-more">Read More</a>
       </div>
     </div>
   </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
   <div class="footer">
     <div class="container-fluid">
