@@ -29,3 +29,4 @@ def contact(request):
 def login(request):
     posts = Blog.objects.filter(status=1)
     return render(request, 'login.html', {'login': login})
+

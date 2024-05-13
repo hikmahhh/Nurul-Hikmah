@@ -46,25 +46,33 @@
     }
 
     .container {
-      margin-top: 50px; /* Jarak antara header dan konten */
+      margin-top: 90px; /* Jarak antara header dan konten */
     }
 
     .content-box {
       background-color: #D3B774; /* Warna latte */
-      padding: 20px;
+      padding: 100px;
       border-radius: 10px; /* Membuat sudut kotak melengkung */
       display: flex; /* Menggunakan flexbox untuk menata gambar dan teks */
+      flex-direction: column; /* Menyusun elemen secara vertikal */
+      align-items: center; /* Mengatur elemen agar berada di tengah secara horizontal */
+      text-align: center; /* Mengatur teks agar berada di tengah secara horizontal */
+      
     }
 
     .content-box img {
-      max-width: 200px; /* Mengatur lebar maksimum gambar */
+      max-width: 300px; /* Mengatur lebar maksimum gambar */
       margin-right: 20px; /* Jarak antara gambar dan teks */
+      max-width: 100%; /* Gambar akan menyesuaikan lebar kontainer */
+      margin-bottom: 20px; /* Jarak antara gambar dan judul */
     }
 
     h2 {
       font-size: 30px; /* Ukuran judul konten */
       font-weight: bold;
       color: white; /* Warna teks judul */
+      margin: 0px; /* Menghapus margin */
+      padding: 20px; /* Memberikan padding untuk penampilan yang lebih baik */
     }
 
     p {
@@ -90,14 +98,7 @@
       font-weight: bold;
       margin-top: 10px;
     }
-    
-    .post-title {
-      text-align: center;
-      margin-top: 30px;
-      margin-bottom: 20px;
-      font-size: 24px;
-      font-weight: bold;
-    }
+
     .post-card {
       display: flex;
       flex-wrap: wrap;
@@ -176,6 +177,18 @@
     </div>
   </nav>
 
+  <div class="container">
+    <div class="content-box">
+      <div class="image-container">
+        <div class="text-container">
+          <h2>Selamat Datang !</h2>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg3y2VyWflzWF3RrhkfdG_zeENPBNZS8FO5LWrAPUB7odX2pd-e2NFAOmC5Q5Rjx5CFog2D8Q_2Wy_Z5tZFsTAikCWmoeM-IjvakfXPdTdQOW8aA87MpFa5CxHL-tMnTSiUIxMUdQHV2Fg0XuQaawNk0qGu28eEL60lQCO7QnIX3Z_aRLu0vZ0VoUIN-L4/s735/WhatsApp_icon.png" alt="WhatsApp">
+      </div>
+      </div>
+    </div>
+  </div>
+  
+
    <!-- Post Title -->
   <h2 class="post-title">Latest Posts</h2>
 
@@ -183,41 +196,41 @@
   <div class="post-card">
     <!-- Card 1 -->
     <div class="card">
-      <img src="post1.jpg" class="card-img-top" alt="Post 1">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEietGB2hV6Y-vPK8izfLPMCI8XWLQ6ldzyLvSXh2ILiP_6MuF-RxlJbQySwOUZ8JbU5LRcg7TFFaXqEazHSUtQleBgu2yEEMLZ7Qo6YUW3uFBs8jF4uTFHnW3oPcInGNDi2rfb3z-LG60gzh5EOPCx1ueIbtcM8PXHD6l11wiIu41jhdzOReZL5ux0k5sk/s808/money-saving-cash-management-3.jpg" class="card-img-top" alt="Post 1">
       <div class="card-body">
-        <h5 class="card-title">Post Title 1</h5>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id tempus velit.</p>
-        <a href="#" class="read-more">Read More</a>
+        <h5 class="card-title">Manajemen Keuangan</h5>
+        <p class="card-text">11 Tips Praktis untuk Mengatur Keuangan Pribadi Anda.</p>
+        <a href="https://www.ocbc.id/id/article/2021/06/03/cara-mengatur-keuangan-pribadi" class="read-more">Read More</a>
       </div>
     </div>
 
      <!-- Card 2 -->
     <div class="card">
-      <img src="post2.jpg" class="card-img-top" alt="Post 2">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSKfLMGhL1t9RlwT-4daBs2Ij5Ijw5iC7bpHBZAwA-i2Y-SE3wh7G_OYsHafhmGMrEWhsgL-onVXwaGnfmLPqFKBO_jLgjjxfc5UlvVZw7i3hFIwCTSwhiFn0CIg_PI_Fmln8LRGVGAL-JxrVX-9a_NgDA82GBvsB6776lizu4Xumq2ZgQdxsmJ5l6tHs/s734/Guide_%20What%20is%20Bitcoin%20&%20How%20Does%20It%20Work_.jpeg" class="card-img-top" alt="Post 2">
       <div class="card-body">
-        <h5 class="card-title">Post Title 2</h5>
-        <p class="card-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-        <a href="#" class="read-more">Read More</a>
+        <h5 class="card-title">Berita Terkini dalam Dunia Keuangan</h5>
+        <p class="card-text">Meningkatnya Transaksi Dengan Uang Elektronik Dapat Tekan Laju Inflasi dan Bantu Ekonomi Negara.</p>
+        <a href="https://fbis.ukdw.ac.id/riset-meningkatnya-transaksi-dengan-uang-elektronik-dapat-tekan-laju-inflasi-dan-bantu-ekonomi-negara/" class="read-more">Read More</a>
       </div>
     </div>
 
     <!-- Card 3 -->
     <div class="card">
-      <img src="post3.jpg" class="card-img-top" alt="Post 3">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZHLrXG6fmRLBteSP8gc2lzgRw91v3jNveR-7Bonc8ezdN_7LL_TKeqeLnL2CRVGBNyRMrdonaXDUcWjdF3V2YJVomN5Q5zbeCgevGNeRJH7djrjo4ab8Mk7FHSQINM3VMiKDCvF_0DOsVpX-SZuKhqHqC0CjFAqHoje-sMUVZ4uyHXgszdCcbeitzO-E/s626/Premium%20Photo%20_%20Double%20exposure%20business%20network%20on%20trading%20graph%20and%20city.jpeg" class="card-img-top" alt="Post 3">
       <div class="card-body">
-        <h5 class="card-title">Post Title 3</h5>
-        <p class="card-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-        <a href="#" class="read-more">Read More</a>
+        <h5 class="card-title">Analisis Pasar</h5>
+        <p class="card-text">Analisis Tren Saham Sektor Teknologi.</p>
+        <a href="https://snips.stockbit.com/unboxing/analisis-tren-saham-sektor-teknologi-bukalapak-goto-grab-sea-dan-emtek" class="read-more">Read More</a>
       </div>
     </div>
 
     <!-- Card 4 -->
     <div class="card">
-      <img src="post4.jpg" class="card-img-top" alt="Post 4">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_5WAO01OFwewNf4__OqV8xorECZuSpV7Jg1Ui1BUjGm4O26g2-b_p8l2Ds3-5WqTU6xrICrZEfYBw6QR1J0ImWS810gd_FOlt1XCbT-QZHo1XQcZ7b8qmkoMTs13qS5teiLmohQw0OaUPp5GayyBVhT98xhHtWwdf9UYthXV6B2AVAGoO9HoHOYJRsvM/s600/uang-rupiah-bank.webp" class="card-img-top" alt="Post 4">
       <div class="card-body">
-        <h5 class="card-title">Post Title 4</h5>
-        <p class="card-text">Vivamus lobortis, arcu eget euismod fermentum, felis libero malesuada lacus.</p>
-        <a href="#" class="read-more">Read More</a>
+        <h5 class="card-title">Review Produk Keuangan</h5>
+        <p class="card-text">6 Bank dengan Suku Bunga Tabungan Paling Tinggi.</p>
+        <a href="https://bisnis.solopos.com/ini-hlo-6-bank-dengan-suku-bunga-tabungan-paling-tinggi-1414608" class="read-more">Read More</a>
       </div>
     </div>
   </div>
