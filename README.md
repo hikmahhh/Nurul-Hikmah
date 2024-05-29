@@ -18,3 +18,4 @@
 
 ## Page Post
 ![Gambar](https://github.com/hikmahhh/Nurul-Hikmah/blob/main/ss%20web/post%201.png)
+![Gambar](https://github.com/hikmahhh/Nurul-Hikmah/blob/main/ss%20web/post%202.png)
