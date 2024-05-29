@@ -15,3 +15,6 @@
 ## Page Pencatatan
 ![Gambar](https://github.com/hikmahhh/Nurul-Hikmah/blob/main/ss%20web/Pencatatan.png)
 ![Gambar](https://github.com/hikmahhh/Nurul-Hikmah/blob/main/ss%20web/Pencatatan%202.png)
+
+## Page Post
+![Gambar](https://github.com/hikmahhh/Nurul-Hikmah/blob/main/ss%20web/post%201.png)
